@@ -181,11 +181,6 @@ Then open **http://localhost:5173** in your browser.
 
 ---
 
-## 👤 Author
-
-**Mahesh Challa**
-- GitHub: [@MaheshChalla2701](https://github.com/MaheshChalla2701)
-
 Built from scratch as a personal exploration into multi-agent AI collaboration and anonymous peer review between language models.
 
 ---
