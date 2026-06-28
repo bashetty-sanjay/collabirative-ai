@@ -1,0 +1,140 @@
+/* ── Stage 2 – Peer Rankings ─────────────────────────────────────── */
+
+/* Judge tabs */
+.s2-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  padding: 0 16px 12px;
+}
+
+.s2-tab {
+  background: var(--bg-tertiary);
+  border: 1px solid var(--border-default);
+  border-radius: 20px;
+  padding: 5px 14px;
+  cursor: pointer;
+  font-size: 12px;
+  color: var(--text-secondary);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 200px;
+  transition: all 0.15s ease;
+}
+
+.s2-tab:hover {
+  border-color: var(--accent-primary);
+  color: var(--text-primary);
+}
+
+.s2-tab.active {
+  background: rgba(99, 102, 241, 0.12);
+  border-color: var(--accent-primary);
+  color: var(--accent-primary);
+  font-weight: 600;
+}
+
+/* Per-judge ranking panel */
+.s2-panel {
+  margin: 0 16px 12px;
+  background: var(--bg-tertiary);
+  border: 1px solid var(--border-default);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.s2-rank-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.s2-rank-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 9px 14px;
+  border-bottom: 1px solid var(--border-subtle);
+  font-size: 13px;
+  color: var(--text-secondary);
+}
+
+.s2-rank-row:last-child { border-bottom: none; }
+
+.s2-rank-row.top {
+  background: rgba(74, 222, 128, 0.06);
+  color: var(--text-primary);
+  font-weight: 600;
+}
+
+.s2-rank-num {
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--text-muted);
+  width: 26px;
+  flex-shrink: 0;
+}
+
+.s2-rank-row.top .s2-rank-num { color: var(--success); }
+
+.s2-rank-name { flex: 1; }
+
+/* Aggregate leaderboard */
+.s2-leaderboard {
+  margin: 0 16px 16px;
+  background: linear-gradient(135deg, rgba(34,211,238,0.06), rgba(99,102,241,0.04));
+  border: 1px solid rgba(34,211,238,0.18);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.s2-lb-title {
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--text-muted);
+  padding: 10px 14px 8px;
+  border-bottom: 1px solid rgba(34,211,238,0.12);
+}
+
+.s2-lb-list { display: flex; flex-direction: column; }
+
+.s2-lb-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 9px 14px;
+  border-bottom: 1px solid var(--border-subtle);
+  font-size: 13px;
+  color: var(--text-secondary);
+  transition: background 0.1s;
+}
+
+.s2-lb-row:last-child { border-bottom: none; }
+
+.s2-lb-row.winner {
+  background: rgba(74, 222, 128, 0.07);
+  color: var(--text-primary);
+  font-weight: 600;
+}
+
+.s2-lb-pos {
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--text-muted);
+  width: 26px;
+  flex-shrink: 0;
+}
+
+.s2-lb-row.winner .s2-lb-pos { color: var(--success); }
+
+.s2-lb-name { flex: 1; font-size: 13px; }
+
+.s2-lb-score {
+  font-size: 11px;
+  color: var(--text-muted);
+  background: var(--bg-secondary);
+  padding: 2px 8px;
+  border-radius: 8px;
+}
